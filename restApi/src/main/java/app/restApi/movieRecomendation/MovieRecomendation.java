@@ -58,7 +58,7 @@ public class MovieRecomendation implements RecomendationInterface {
 
                 String newGender = md.gender.replace("|", ",");
                 jsonObject.put("Gender", newGender);
-                jsonObject.put("Tipo", md.type);
+                jsonObject.put("Type", md.type);
                 jsonObject.put("Release Year", md.releaseYear);
                 jsonObject.put("Country", md.country);
 
@@ -85,7 +85,7 @@ public class MovieRecomendation implements RecomendationInterface {
 
                 String newGender = md.gender.replace("|", ",");
                 jsonObject.put("Gender", newGender);
-                jsonObject.put("Tipo", md.type);
+                jsonObject.put("Type", md.type);
                 jsonObject.put("Release Year", md.releaseYear);
                 jsonObject.put("Country", md.country);
 

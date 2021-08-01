@@ -25,7 +25,6 @@ public class restController {
 
     @GetMapping("pesquisaGenero/{genero}")
     public JSONArray searchType(@PathVariable String genero){
-
         return movieRecomendation.buscarGenero(genero);
     }
 
