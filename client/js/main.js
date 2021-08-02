@@ -1,9 +1,11 @@
 function search(){
     if(document.getElementById("searchType").value == 1){
+        $("#movies").empty();
         getApi("pesquisaTitulo");
     }
     else if(document.getElementById("searchType").value == 2){
-        genderSearch("pesquisaGenero");
+        $("#movies").empty();
+        getApi("pesquisaGenero");
     }
 }
 
@@ -46,8 +48,8 @@ function createRow(movie){
 
 function getApi(searchType){
    
-    let title = document.getElementById("search").value;
-    let url = "http://localhost:8080/" + searchType + "/" + title;
+    let key = document.getElementById("search").value;
+    let url = "http://localhost:8080/" + searchType + "/" + key;
 
 
     let request = new XMLHttpRequest();
