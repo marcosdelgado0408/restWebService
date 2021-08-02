@@ -1,14 +1,47 @@
 function search(){
+
+    $("#movies").empty();       
+
+    insertFirstRow();
+
     if(document.getElementById("searchType").value == 1){
-        $("#movies").empty();
         getApi("pesquisaTitulo");
     }
     else if(document.getElementById("searchType").value == 2){
-        $("#movies").empty();
         getApi("pesquisaGenero");
     }
 }
 
+
+
+
+function insertFirstRow(){
+    var table  = document.getElementById("movies");
+    var row = table.insertRow();
+    var cell = row.insertCell();
+   
+    cell.innerHTML = "TITLE";
+    cell = row.insertCell();
+
+    cell.innerHTML = "DURATION";
+    cell = row.insertCell();
+
+    cell.innerHTML = "GENDER";
+    cell = row.insertCell();
+
+    cell.innerHTML = "TYPE";
+    cell = row.insertCell();
+
+    cell.innerHTML = "RELEASE YEAR";
+    cell = row.insertCell();
+
+    cell.innerHTML = "COUNTRY";
+    cell = row.insertCell();
+
+    cell.innerHTML = "DESCRIPTION";
+    cell = row.insertCell();
+
+}
 
 
 function createRow(movie){
