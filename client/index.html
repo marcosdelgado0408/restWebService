@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Netflix recomendation</title>
+
+    <style>
+        td, tr, movies{
+            border: 1px solid black;
+        }
+    </style>
+
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <div>
+        <h1>Netflix movies and series</h1>
+    </div>
+    
+    <div class="input-group">
+        <select id="searchType" class="form-control">
+                <option value="" disabled selected>Search by</option>
+                <option value=1>Title</option>
+                <option value=2>Gender</option> 
+        </select>
+        <input  type="text" id="search" size="10"  required class="form-control"/>
+        <button type="button" onclick=search() class="btn btn-danger" >go</button>
+    </div>
+
+
+    <div class="row">
+        <table id="movies" class="table text-white">
+            
+          </table>
+    </div>
+
+
+</body>
+
+
+</html>
